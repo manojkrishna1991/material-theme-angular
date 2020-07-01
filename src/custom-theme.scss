@@ -1,0 +1,83 @@
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$mat-white: (
+  50: #ffffff,
+  100: #fafafa,
+  200: #f5f5f5,
+  300: #f0f0f0,
+  400: #dedede,
+  500: #c2c2c2,
+  600: #979797,
+  700: #818181,
+  800: #606060,
+  900: #3c3c3c,
+  A100: #FFFFFF,
+  A200: #FFFFFF,
+  A400: #FFFFFF,
+  A700: #FFFFFF,
+  contrast: (
+    50: #ffffff,
+    100: #fafafa,
+    200: #f5f5f5,
+    300: #f0f0f0,
+    400: #dedede,
+    500: #c2c2c2,
+    600: #979797,
+    700: #818181,
+    800: #606060,
+    900: #3c3c3c,
+    A100: #FFFFFF,
+    A200: #FFFFFF,
+    A400: #FFFFFF,
+    A700: #FFFFFF,
+  )
+);
+$mat-green: (
+  50: #e6f7e9,
+  100: #c4eac8,
+  200: #9ddda4,
+  300: #72d07f,
+  400: #4ec562,
+  500: #21ba45,
+  600: #13ab3b,
+  700: #009830,
+  800: #008724,
+  900: #00680b,
+  A100: #edf9e7,
+  A200: #d2f0c3,
+  A400: #b3e59c,
+  A700: #92db71,
+  contrast: (
+    50: #f8e6f2,
+    100: #edbfde,
+    200: #e194ca,
+    300: #d268b4,
+    400: #c745a4,
+    500: #ba2196,
+    600: #ad1c91,
+    700: #9c138a,
+    800: #9c138a,
+    900: #700276,
+    A100: #f8e6f2,
+    A200: #edbfde,
+    A400: #e194ca,
+    A700: #d268b4,
+  )
+);
+
+$primary: mat-palette($mat-white);
+$accent:  mat-palette($mat-green, A200, A100, A400);
+$theme: mat-light-theme($primary, $accent);
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($theme);
